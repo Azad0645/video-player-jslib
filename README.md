@@ -2,7 +2,7 @@
 
 Видеоплеер с собственным управлением и стилизацией. Основан на библиотеке `Playable`.
 
-![Screenshot.png](screenshots/Screenshot.png)
+![Screenshot.png](screenshots/Screenshot.PNG)
 
 ## Как подключить
 
