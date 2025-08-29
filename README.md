@@ -67,4 +67,4 @@
 ```
 
 ## Онлайн-демо
-Онлайн-демо:
+[Web Player](https://azad0645.github.io/video-player-jslib/)
