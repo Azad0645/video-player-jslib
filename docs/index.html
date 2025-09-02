@@ -15,7 +15,7 @@
       flex-direction: column;
     }
 
-    .js-video-container {
+    .video-container {
       flex-grow: 1;
       background: black;
     }
@@ -25,11 +25,7 @@
       display: flex;
     }
 
-    .js-play-button,
-    .js-pause-button,
-    .js-volume-button,
-    .js-mute-button,
-    .js-fullscreen-button {
+    .control-button {
       border: none;
       cursor: pointer;
       color: white;
@@ -49,48 +45,49 @@
       color: white;
     }
 
-    .js-progress {
+    .progress {
+      height: 10px;
       background-color: grey;
     }
 
-    .js-progress-slider {
+    .progress-slider {
+      height: 100%;
       background-color: red;
     }
   </style>
 </head>
 <body>
   <div id="player">
-    <div class="js-video-container"></div>
+    <div class="js-video-container video-container"></div>
 
     <div class="player-bar">
-      <button class="js-play-button" hidden>
+      <button class="js-play-button control-button" hidden>
         <i class="fa fa-play" aria-hidden="true"></i>
       </button>
-      <button class="js-pause-button" hidden>
+      <button class="js-pause-button control-button" hidden>
         <i class="fa fa-pause" aria-hidden="true"></i>
       </button>
-      <button class="js-volume-button" hidden>
+      <button class="js-volume-button control-button" hidden>
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
-      <button class="js-mute-button" hidden>
+      <button class="js-mute-button control-button" hidden>
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
 
-      <div class="spacer"></div>
+      <div class="spacer">
+        <div class="js-progress progress">
+          <div class="js-progress-slider progress-slider"></div>
+        </div>
+        <div class="time-info">
+          <span class="js-current-time"></span>
+          —
+          <span class="js-duration"></span>
+        </div>
+      </div>
 
-      <button class="js-fullscreen-button">
-          <i class="fa fa-expand" aria-hidden="true"></i>
+      <button class="js-fullscreen-button control-button">
+        <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
-    </div>
-
-    <div class="time-info">
-      <span class="js-current-time"></span>
-      —
-      <span class="js-duration"></span>
-    </div>
-
-    <div class="js-progress">
-      <div class="js-progress-slider">Прогресс</div>
     </div>
   </div>
 
